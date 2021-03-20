@@ -115,4 +115,3 @@ class Student:
             self._attendance = value
         else:
             raise ValueError('Должно быть число от 0 до 100')
-
