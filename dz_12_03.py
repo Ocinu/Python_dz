@@ -6,6 +6,8 @@
  - Получить год покупки машины
  - Получить цену
  - Получить пробег
+
+https://github.com/Ocinu/Python_dz/blob/main/dz_12_03.py
 """
 
 

@@ -13,6 +13,8 @@
 !!Нужно использовать код из первого задания.
 
 В качестве готового ДЗ отправить файл с расширением .py
+
+https://github.com/Ocinu/Python_dz/blob/main/dz_12_03_part2.py
 """
 from dz_12_03 import *
 
