@@ -138,36 +138,40 @@ class Circle:
 class Shape:
     def __init__(self):
         self.figure = None
+        self.file_name = None
 
     def show(self):
         print(self.figure)
 
     def save(self):
-        with open('file.txt', 'w') as f:
+        with open(self.file_name, 'w') as f:
             f.write(self.figure)
 
     def load(self):
-        with open('file.txt', 'r') as f:
+        with open(self.file_name, 'r') as f:
             self.figure = f.read()
 
 
 class Square(Shape):
     def __init__(self, a):
-        super(Square, self).__init__()
+        super().__init__()
         self.a = a
         self.figure = a * a
+        self.file_name = 'square.txt'
 
 
 class Rectangle(Shape):
     def __init__(self, a, b):
-        super(Rectangle, self).__init__()
+        super().__init__()
         self.a = a
         self.b = b
         self.figure = a * b
+        self.file_name = 'rectangle.txt'
 
 
 class Circle2(Shape):
     def __init__(self, r):
-        super(Circle2, self).__init__()
+        super().__init__()
         self.r = r
         self.figure = 3.14 * r ^ 2
+        self.file_name = 'circle.txt'

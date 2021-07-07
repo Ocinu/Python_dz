@@ -68,7 +68,8 @@ for i in train_list:
 for i in train_list:
     destination_list.append(i.destination)
 
-print(sorted(destination_list))
+sort_list = sorted(train_list, key=lambda x: (x.destination[0], x.departure[0]))
+
 
 """
 Задание #3:
