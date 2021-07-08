@@ -16,8 +16,9 @@ text_list = ['comma.do', 'boo,foo', 'bo@ro-mo']
 
 
 def replace_pun(text: str) -> str:
-    for i in string.punctuation:
-        text = text.replace(i, ' ')
+    for i in text:
+        if i in string.punctuation:
+            text = text.replace(i, ' ')
     return text
 
 
