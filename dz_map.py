@@ -9,7 +9,7 @@
 import string
 print(string.punctuation)
 """
-from datetime import datetime
+from datetime import date
 import string
 
 text_list = ['comma.do', 'boo,foo', 'bo@ro-mo']
@@ -35,12 +35,13 @@ print(list(new_list))
 
 birth_date = ['1/5/2012', '14/10/1973', '6/10/1999', '7/5/2000', '6/9/1966', '24/12/2002', '3/3/1964', '30/9/1984',
               '29/5/1956', '15/9/1952', '1/4/1960', '3/4/1992', '8/8/1968', '19/12/1994', '2/12/1982', '29/10/1991',
-              '20/11/1991', '31/6/1979', '10/1/2009', '1/2/2001']
+              '20/11/1991', '31/6/1979', '10/1/2009', '1/2/2001', '31/07/2020']
 
 
-def get_age(date: str) -> int:
-    return datetime.now().year - int(date.split('/')[-1])
+def calculate_age(born: str) -> int:
+    born = born.split('/')
+    today = date.today()
+    return today.year - int(born[-1]) - ((today.month, today.day) < (int(born[1]), int(born[0])))
 
 
-print(list(map(get_age, birth_date)))
-
+print(list(map(calculate_age, birth_date)))

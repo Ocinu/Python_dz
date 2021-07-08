@@ -26,13 +26,11 @@ def get_avg_eng(_dict) -> int:
     return round(temp / len(_dict))
 
 
-math_apprisal = dict(filter(lambda x: x[1]['math'] >= 10, students.items()))
-eng_apprisal = dict(filter(lambda x: x[1]['english'] > get_avg_eng(students), students.items()))
-geo_apprisal = dict(filter(lambda x: x[1]['geography'] < 7, students.items()))
+sorted_students = dict(filter(lambda x: x[1]['math'] >= 10 and
+                                        x[1]['geography'] >= 7 and
+                                        x[1]['english'] > get_avg_eng(students), students.items()))
 
-print(list(math_apprisal.keys()))
-print(list(eng_apprisal.keys()))
-print(list(geo_apprisal.keys()))
+print(list(sorted_students.keys()))
 
 """
 Задание 2:
